@@ -11,15 +11,19 @@
       <h1>Chatti the chat bot</h1>
     </header>
     <section class="chat-box">
-      <div class="message-area"> </div>
-      <div class="text-entry">
-        <textarea name="name" class="input-box" value=""></textarea>
-        <button type="button" name="submit"></button>
-      </div>
-    </section>
+      <div class="message-area">
+        <template class="message" v-for='note of chatLog'>
 
+        </template>
+      </div>
+      <form class="text-entry" action="index.html" method="post">
+        <input type="text" v-model="user-message" name="name" class="input-box" value="">
+        <button type="submit" name="submit">Send</button>
+      </form>
+    </section>
     <footer>
     </footer>
+    <script src="https://unpkg.com/vue" charset="utf-8"></script>
     <script src="js/translate.js" charset="utf-8"></script>
     <script src="js/weather.js" charset="utf-8"></script>
     <script src="js/whatis.js" charset="utf-8"></script>
